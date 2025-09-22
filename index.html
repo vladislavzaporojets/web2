@@ -365,7 +365,7 @@
 
         <!-- Секция с формой -->
         <section id="form">
-            <h2>Форма с обязательными полями</h2>
+            <h2>Форма</h2>
             <form action="/" method="POST" id="myForm">
                 <label class="required">
                     Поле для ввода Ф.И.О:
@@ -400,7 +400,7 @@
                         Мужской
                     </label>
                     <label>
-                        <input type="radio" name="radio-gender" value="female">
+                        <input required type="radio" name="radio-gender" value="female">
                         Женский
                     </label>
                 </div>
@@ -450,47 +450,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('myForm');
-            
-            
-            form.addEventListener('submit', function(event) {
-                let isValid = true;
-                
-                
-                const requiredFields = form.querySelectorAll('[required]');
-                requiredFields.forEach(function(field) {
-                    if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
-                        isValid = false;
-                        field.nextElementSibling.style.display = 'block';
-                    } else {
-                        field.nextElementSibling.style.display = 'none';
-                    }
-                });
-                
-                
-                const genderRadios = form.querySelectorAll('input[name="radio-gender"]');
-                let genderSelected = false;
-                for (const radio of genderRadios) {
-                    if (radio.checked) {
-                        genderSelected = true;
-                        break;
-                    }
-                }
-                if (!genderSelected) {
-                    isValid = false;
-                    document.querySelectorAll('.error-message')[4].style.display = 'block';
-                } else {
-                    document.querySelectorAll('.error-message')[4].style.display = 'none';
-                }
-                
-                if (!isValid) {
-                    event.preventDefault();
-                    alert('Пожалуйста, заполните все обязательные поля.');
-                }
-            });
-        });
-    </script>
+
 </body>
 </html>
