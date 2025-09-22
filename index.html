@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="style.css">
+    <title>Лабораторная работа 2</title><
+
+<!--        -->
+<!--        /* Общие стили */-->
+<!--        * {-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
+
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            line-height: 1.6;-->
+<!--            color: #333;-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            min-height: 100vh;-->
+<!--        }-->
+
+<!--        .container {-->
+<!--            max-width: 960px;-->
+<!--            margin: 0 auto;-->
+<!--            padding: 0 15px;-->
+<!--        }-->
+
+<!--        /* Стили шапки */-->
+<!--        header {-->
+<!--            background-color: #2c3e50;-->
+<!--            padding: 15px 0;-->
+<!--            width: 100%;-->
+<!--            color: white;-->
+<!--        }-->
+
+<!--        .header-content {-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--            justify-content: space-between;-->
+<!--            flex-wrap: wrap;-->
+<!--        }-->
+
+<!--        .logo-title {-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--        }-->
+
+<!--        .logo {-->
+<!--            width: 60px;-->
+<!--            height: 60px;-->
+<!--            background-color: #3498db;-->
+<!--            border-radius: 50%;-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--            justify-content: center;-->
+<!--            margin-right: 15px;-->
+<!--            color: white;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+
+<!--        .site-title h1 {-->
+<!--            font-size: 24px;-->
+<!--            color: white;-->
+<!--        }-->
+
+<!--        nav ul {-->
+<!--            list-style: none;-->
+<!--            display: flex;-->
+<!--        }-->
+
+<!--        nav ul li {-->
+<!--            margin-left: 20px;-->
+<!--        }-->
+
+<!--        nav ul li a {-->
+<!--            text-decoration: none;-->
+<!--            color: white;-->
+<!--            font-weight: bold;-->
+<!--            padding: 5px 10px;-->
+<!--            border-radius: 4px;-->
+<!--            transition: background-color 0.3s;-->
+<!--        }-->
+
+<!--        nav ul li a:hover {-->
+<!--            background-color: #3498db;-->
+<!--        }-->
+
+<!--        /* Стили основного контента */-->
+<!--        main {-->
+<!--            flex: 1;-->
+<!--            padding: 30px 0;-->
+<!--        }-->
+
+<!--        section {-->
+<!--            margin-bottom: 40px;-->
+<!--            padding: 20px;-->
+<!--            background-color: #f9f9f9;-->
+<!--            border-radius: 8px;-->
+<!--            box-shadow: 0 2px 5px rgba(0,0,0,0.1);-->
+<!--        }-->
+
+<!--        h1, h2 {-->
+<!--            margin-bottom: 20px;-->
+<!--            color: #2c3e50;-->
+<!--        }-->
+
+<!--        ol {-->
+<!--            margin-left: 20px;-->
+<!--        }-->
+
+<!--        li {-->
+<!--            margin-bottom: 10px;-->
+<!--        }-->
+
+<!--        a {-->
+<!--            color: #3498db;-->
+<!--            text-decoration: none;-->
+<!--        }-->
+
+<!--        a:hover {-->
+<!--            text-decoration: underline;-->
+<!--        }-->
+
+<!--        /* Стили таблицы */-->
+<!--        table {-->
+<!--            width: 100%;-->
+<!--            border-collapse: collapse;-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+
+<!--        th, td {-->
+<!--            padding: 12px;-->
+<!--            text-align: left;-->
+<!--            border: 1px solid #ddd;-->
+<!--        }-->
+
+<!--        th {-->
+<!--            background-color: #2c3e50;-->
+<!--            color: white;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+
+<!--        tr:nth-child(even) {-->
+<!--            background-color: #f2f2f2;-->
+<!--        }-->
+
+<!--        tr:nth-child(odd) {-->
+<!--            background-color: #fff;-->
+<!--        }-->
+
+<!--        /* Стили формы */-->
+<!--        form {-->
+<!--            max-width: 600px;-->
+<!--        }-->
+
+<!--        label {-->
+<!--            display: block;-->
+<!--            margin-bottom: 5px;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+
+<!--        .required::after {-->
+<!--            content: " *";-->
+<!--            color: red;-->
+<!--        }-->
+
+<!--        input[type="text"],-->
+<!--        input[type="tel"],-->
+<!--        input[type="email"],-->
+<!--        input[type="date"],-->
+<!--        select,-->
+<!--        textarea {-->
+<!--            width: 100%;-->
+<!--            padding: 10px;-->
+<!--            margin-bottom: 15px;-->
+<!--            border: 1px solid #ddd;-->
+<!--            border-radius: 4px;-->
+<!--            font-size: 16px;-->
+<!--        }-->
+
+<!--        input[type="radio"],-->
+<!--        input[type="checkbox"] {-->
+<!--            margin-right: 5px;-->
+<!--        }-->
+
+<!--        .radio-group, .checkbox-group {-->
+<!--            margin-bottom: 15px;-->
+<!--        }-->
+
+<!--        .error-message {-->
+<!--            color: #e74c3c;-->
+<!--            font-size: 0.9em;-->
+<!--            margin-bottom: 15px;-->
+<!--            display: none;-->
+<!--        }-->
+
+<!--        input[type="submit"] {-->
+<!--            background-color: #2ecc71;-->
+<!--            color: white;-->
+<!--            padding: 12px 24px;-->
+<!--            border: none;-->
+<!--            border-radius: 4px;-->
+<!--            cursor: pointer;-->
+<!--            font-size: 16px;-->
+<!--            font-weight: bold;-->
+<!--            transition: background-color 0.3s;-->
+<!--        }-->
+
+<!--        input[type="submit"]:hover {-->
+<!--            background-color: #27ae60;-->
+<!--        }-->
+
+<!--        /* Стили подвала */-->
+<!--        footer {-->
+<!--            background-color: #2c3e50;-->
+<!--            padding: 20px 0;-->
+<!--            width: 100%;-->
+<!--            color: white;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        /* Адаптивность */-->
+<!--        @media (max-width: 768px) {-->
+<!--            .header-content {-->
+<!--                flex-direction: column;-->
+<!--                align-items: flex-start;-->
+<!--            }-->
+<!--            -->
+<!--            .logo-title {-->
+<!--                margin-bottom: 15px;-->
+<!--            }-->
+<!--            -->
+<!--            nav ul {-->
+<!--                flex-direction: column;-->
+<!--                width: 100%;-->
+<!--            }-->
+<!--            -->
+<!--            nav ul li {-->
+<!--                margin: 5px 0;-->
+<!--                margin-left: 0;-->
+<!--            }-->
+<!--        }-->
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-title">
+                    <div class="logo">Лого</div>
+                    <div class="site-title">
+                        <h1>Мой учебный сайт</h1>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#links">Ссылки</a></li>
+                        <li><a href="#table">Таблица</a></li>
+                        <li><a href="#form">Форма</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Анкор для навигации -->
+        <a id="top"></a>
+        <h1>Лабораторная работа 2</h1>
+
+        <!-- Секция со ссылками -->
+        <section id="links">
+            <h2>Список гиперссылок</h2>
+            <ol>
+                <li><a href="http://kubsu.ru/">КубГУ</a> </li>
+                <li><a href="https://kubsu.ru/">КубГУ</a> </li>
+                <li><a href="https://kubsu.ru/">
+                    <img src="Group3288.png" alt="Описание изображения">
+                </a></li>
+                <li><a href="/about">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+                <li><a href="#top">Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="https://example.com/page?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами в URL</a></li>
+                <li><a href="https://example.com/page?id=123">Ссылка с параметром id в URL</a></li>
+                <li><a href="form.html">Относительная на страницу в текущем каталоге</a></li>
+                <li><a href="about/form.html">Относительная на страницу в каталоге about</a></li>
+                <li><a href="../parent.html">Относительная на страницу в каталоге уровнем выше</a></li>
+                <li><a href="../../grandparent.html">Относительная на страницу двумя уровнями выше</a></li>
+                <li><p>Это текст абзаца с <a href="https://kubsu.ru">контекстной ссылкой</a> внутри него.</p></li>
+                <li><a href="https://example.com/about#team">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li>
+                    <img src="КВ.png" alt="Image Map" usemap="#examplemap" >
+                    <map name="examplemap">
+                        <area shape="rect" coords="96,105,725,750" href="https://www.kubsu.ru/ai/" alt="Rectangular area">
+                        <area shape="circle" coords="1179,402,330" href="https://vk.com/kubsu_official" alt="Circular area">
+                    </map>
+                </li>
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="https://kubsu.ru" rel="nofollow">Ссылка с запрещенным переходом для поисковиков</a></li>
+                <li><a href="https://kubsu.ru" rel="noindex">Ссылка, запрещенная для индексации</a></li>
+                <li>
+                    <ol>
+                        <li><a href="https://kubsu.ru" title="Официальный сайт КубГУ">Кубанский государственный университет</a></li>
+                        <li><a href="https://kubsu.ru/university" title="Информация об университете">Об университете</a></li>
+                        <li><a href="https://kubsu.ru/education" title="Образовательные программы">Образование</a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://user:password@ftp.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+            </ol>
+        </section>
+
+        <!-- Секция с таблицей -->
+        <section id="table">
+            <h2>Таблица</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Колонка 1</th>
+                        <th>Колонка 2</th>
+                        <th>Колонка 3</th>
+                        <th>Колонка 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Ячейка 1-2 объединенная</td>
+                        <td>Ячейка 3</td>
+                        <td rowspan="2">Ячейка 4-5 объединенная</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 6</td>
+                        <td>Ячейка 7</td>
+                        <td>Ячейка 8</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 9</td>
+                        <td colspan="3">Ячейка 10-12 объединенная</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 13</td>
+                        <td>Ячейка 14</td>
+                        <td>Ячейка 15</td>
+                        <td>Ячейка 16</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Ячейка 17-21 объединенная</td>
+                        <td>Ячейка 18</td>
+                        <td>Ячейка 19</td>
+                        <td>Ячейка 20</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 22</td>
+                        <td>Ячейка 23</td>
+                        <td>Ячейка 24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Секция с формой -->
+        <section id="form">
+            <h2>Форма с обязательными полями</h2>
+            <form action="/" method="POST" id="myForm">
+                <label class="required">
+                    Поле для ввода Ф.И.О:
+                </label>
+                <input type="text" name="field-fio" placeholder="Введите Ф.И.О" required>
+                <div class="error-message">Это поле обязательно для заполнения</div>
+                
+                <label class="required">
+                    Поле для ввода номера телефона:
+                </label>
+                <input type="tel" name="field-number" placeholder="Введите номер телефона" required pattern="[0-9]{10,11}">
+                <div class="error-message">Введите корректный номер телефона (10-11 цифр)</div>
+                
+                <label class="required">
+                    Поле для ввода e-mail:
+                </label>
+                <input type="email" name="field-email" placeholder="Введите e-mail" required>
+                <div class="error-message">Введите корректный email адрес</div>
+                
+                <label class="required">
+                    Поле для ввода даты рождения:
+                </label>
+                <input type="date" name="field-date" required>
+                <div class="error-message">Выберите дату рождения</div>
+                
+                <label class="required">
+                    Выберите пол:
+                </label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="radio-gender" value="male" required>
+                        Мужской
+                    </label>
+                    <label>
+                        <input type="radio" name="radio-gender" value="female">
+                        Женский
+                    </label>
+                </div>
+                <div class="error-message">Выберите пол</div>
+                
+                <label class="required">
+                    Выберите любимый язык программирования:
+                </label>
+                <select name="field-programming-languages[]" multiple size="8" required>
+                    <option value="pascal">Pascal</option>
+                    <option value="c">C</option>
+                    <option value="c++">C++</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="haskel">Haskel</option>
+                    <option value="clojure">Clojure</option>
+                    <option value="prolog">Prolog</option>
+                    <option value="scala">Scala</option>
+                </select>
+                <div class="error-message">Выберите хотя бы один язык программирования</div>
+                
+                <label class="required">
+                    Опишите краткую биографию:
+                </label>
+                <textarea name="field-biography" placeholder="Опишите свою биографию" required minlength="10"></textarea>
+                <div class="error-message">Биография должна содержать не менее 10 символов</div>
+                
+                <div class="checkbox-group">
+                    <label class="required">
+                        <input name="field-check" type="checkbox" required>
+                        С контрактом ознакомлен(а)
+                    </label>
+                </div>
+                <div class="error-message">Необходимо принять условия контракта</div>
+                
+                <input value="Сохранить" type="submit">
+            </form>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <p>&copy; Владислав Запорожец 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('myForm');
+            
+            
+            form.addEventListener('submit', function(event) {
+                let isValid = true;
+                
+                
+                const requiredFields = form.querySelectorAll('[required]');
+                requiredFields.forEach(function(field) {
+                    if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
+                        isValid = false;
+                        field.nextElementSibling.style.display = 'block';
+                    } else {
+                        field.nextElementSibling.style.display = 'none';
+                    }
+                });
+                
+                
+                const genderRadios = form.querySelectorAll('input[name="radio-gender"]');
+                let genderSelected = false;
+                for (const radio of genderRadios) {
+                    if (radio.checked) {
+                        genderSelected = true;
+                        break;
+                    }
+                }
+                if (!genderSelected) {
+                    isValid = false;
+                    document.querySelectorAll('.error-message')[4].style.display = 'block';
+                } else {
+                    document.querySelectorAll('.error-message')[4].style.display = 'none';
+                }
+                
+                if (!isValid) {
+                    event.preventDefault();
+                    alert('Пожалуйста, заполните все обязательные поля.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
